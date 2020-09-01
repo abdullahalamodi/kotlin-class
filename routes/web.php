@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\testController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

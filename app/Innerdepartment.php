@@ -14,7 +14,6 @@ class Innerdepartment extends Model
         return $this->belongsTo("App\Department");
     }
 
-
       //has user
       public function user(){
         return $this->hasOne("App\User");

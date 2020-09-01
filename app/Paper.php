@@ -9,26 +9,41 @@ class Paper extends Model
     public $table="papers";
     public $timestamps = false;
 
-    //paper tags
-    public function tags(){
-        return $this->belongsToMany("App\Tag");
-    }
-
-    //create
-    public function department(){
-        return $this->belongsToMany("App\Department");
-    }
-
+    
+    //create paper
     public function department_paper(){
         return $this->hasMany("App\Department_paper");
     }
 
-    //attachment
+    //tages
+    public function paper_tag(){
+        return $this->hasMany("App\Paper_tag");
+    }
+
+    //attachmnet
+    public function paper_letter(){
+        return $this->hasMany("App\Paper_letter");
+    }
+
+    //privilees
+    public function paper_user(){
+        return $this->hasMany("App\Paper_user");
+    }
+
+    public function tags(){
+        return $this->belongsToMany("App\Tag");
+    }
+
+    
+    public function department(){
+        return $this->belongsToMany("App\Department");
+    }
+
+    
     public function letter(){
         return $this->belongsToMany("App\Letter");
     }
 
-    //privileges
     public function user(){
         return $this->belongsToMany("App\User");
     }

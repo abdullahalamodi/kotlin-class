@@ -15,7 +15,7 @@ class CreateLetterDepartmentTable extends Migration
     {
         Schema::create('letter_department', function (Blueprint $table) {
             $table->integer("letter_id")->unsigned();
-            $table->integer("from_id")->unsigned();
+            $table->integer("department_id")->unsigned();
             $table->integer("to_id")->unsigned();
             $table->date("date")->nullable();
             $table->text("discription")->nullable();
