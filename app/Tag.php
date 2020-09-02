@@ -8,7 +8,7 @@ class Tag extends Model
 {
     public $table="tags";
 
-    public function paper(){
+    public function papers(){
         return $this->belongsToMany("App\Paper");
     }
 }

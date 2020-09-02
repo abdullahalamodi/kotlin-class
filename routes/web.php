@@ -22,4 +22,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test',"testController@test");
+Route::get('/test/{search}',"testController@test");

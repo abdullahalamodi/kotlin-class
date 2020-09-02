@@ -10,11 +10,15 @@ class Department extends Model
     public $timestamps = false;
 
 
-    //create
-    public function paper(){
+    //to paper
+    public function papers(){
         return $this->belongsToMany("App\Paper");
     }
 
+    //create paper
+    public function department_paper(){
+        return $this->hasMany("App\Department_paper");
+    }
   
     //is inner
     public function innerDepartment(){

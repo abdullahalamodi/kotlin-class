@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Paper_tags extends Model
+class Paper_tag extends Model
 {
-    public $table = "paper_tags";
+    public $table = "paper_tag";
     public $timestamp = false;
 
     public function paper(){

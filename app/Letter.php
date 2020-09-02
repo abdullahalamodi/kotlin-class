@@ -21,8 +21,14 @@ class Letter extends Model
 
 
 
-    public function paper(){
+    //for many to many --atachments
+    public function papers(){
         return $this->belongsToMany("App\Paper");
+    }
+
+    //for one to one --inhertance
+    public function paper(){
+        return $this->belongsTo("App\Paper");
     }
 
   
